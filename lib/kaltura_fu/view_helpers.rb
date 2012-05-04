@@ -54,7 +54,7 @@ module KalturaFu
         seconds_parameter = "/vid_sec/5"
       end
       
-      image_tag("#{KalturaFu.cofing[:service_url]}/p/#{KalturaFu.config[:partner_id]}" +
+      image_tag("#{KalturaFu.config[:service_url]}/p/#{KalturaFu.config[:partner_id]}" +
 		"/thumbnail/entry_id/#{entry_id}" + 
 		seconds_parameter + 
 		size_parameters)
@@ -121,7 +121,7 @@ module KalturaFu
       	};
 
       	swfobject.embedSWF(\"#{KalturaFu.config.service_url}/kwidget/wid/_#{KalturaFu.config.partner_id}" + player_conf_parameter + "\",\"#{options[:div_id]}\",\"#{width}\",\"#{height}\",\"10.0.0\",\"http://ttv.mit.edu/swfs/expressinstall.swf\",flashVars,params,attributes);
-      </script>"
+      </script>".html_safe
     end
     
     ##
@@ -158,7 +158,7 @@ module KalturaFu
 
         swfobject.embedSWF(\"#{KalturaFu.config.service_url}/kupload/ui_conf_id/4211621\", \"uploader\", \"160\", \"26\", \"9.0.0\", \"expressInstall.swf\", flashVars, params,attributes);
 
-    	</script>"
+    	</script>".html_safe
     end
     
     ##
